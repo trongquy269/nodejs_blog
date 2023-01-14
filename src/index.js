@@ -5,6 +5,10 @@ const handlebars = require("express-handlebars");
 const app = express();
 const port = 3000;
 
+// Static files
+app.use(express.static(path.join(__dirname, 'public')))
+
+// HTTP logger
 app.use(morgan("combined"));
 
 // Template engine
